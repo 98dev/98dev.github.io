@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="pu">
+    
+    <title>
+        
+            JAVA常用数据结构 |
+        
+        Happy&#39;s Site
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://i.im.ge/2023/06/03/hYtZG8.co200221130121-21.gif">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"https://i.im.ge/2023/06/03/hYtmwT.co200221130121-216.gif","favicon":"https://i.im.ge/2023/06/03/hYtZG8.co200221130121-21.gif","avatar":"https://i.im.ge/2023/06/03/hYtY1z.co200221130121-221.gif","font_size":null,"font_family":"Noto Serif SC","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":false,"custom_label_list":["Lv999"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://i.im.ge/2023/06/03/hYtmwT.co200221130121-216.gif">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Happy&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">JAVA常用数据结构</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://i.im.ge/2023/06/03/hYtY1z.co200221130121-221.gif">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">pu</span>
+                            
+                                <span class="author-label">Lv999</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-04-03 18:32:25</span>
+        <span class="mobile">2022-04-03 18:32</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-06-03 19:14:08</span>
+    </span>
+    
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>本文整理了<code>Java</code>语言的常用数据结构，方便刷题&#x2F;面试时使用。</p>
+<span id="more"></span>
+
+
+<div style="width:100%;text-align: center;"> 
+    <img  
+                     lazyload
+                     alt="image"
+                     data-src="https://z3.ax1x.com/2021/08/19/fqIo9J.png"
+                      
+    alt="Logo" 
+    style="height:256px;margin: 2rem auto;"
+                >
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>容器</th>
+<th>对应数据结构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>List</td>
+<td>变长数组</td>
+</tr>
+<tr>
+<td>Queue</td>
+<td>队列</td>
+</tr>
+<tr>
+<td>PriorityQueue</td>
+<td>堆</td>
+</tr>
+<tr>
+<td>Stack</td>
+<td>栈</td>
+</tr>
+<tr>
+<td>Deque</td>
+<td>双端队列</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>集合</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>键值表</td>
+</tr>
+<tr>
+<td>Pair</td>
+<td>元素对</td>
+</tr>
+</tbody></table>
+<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testArrayList</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;------ArrayList Start------&quot;</span>);</span><br><span class="line">        <span class="comment">// 定义 ArrayList</span></span><br><span class="line">        <span class="comment">// 定义一个空 ArrayList</span></span><br><span class="line">        List&lt;Integer&gt; a = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 定义一个空 ArrayList，初始容量为3</span></span><br><span class="line">        List&lt;Integer&gt; b = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(<span class="number">3</span>);</span><br><span class="line">        <span class="comment">// 定义一个包含元素1,2,3 的 ArrayList</span></span><br><span class="line">        ArrayList&lt;Integer&gt; c = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历 ArrayList</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; c.size(); i++)</span><br><span class="line">            System.out.print(c.get(i) + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x : c)</span><br><span class="line">            System.out.print(x + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取 ArrayList 第一个和最后一个元素</span></span><br><span class="line">        System.out.println(c.get(<span class="number">0</span>)); <span class="comment">// 第一个元素：c[0]常用</span></span><br><span class="line">        System.out.println(c.get(c.size() - <span class="number">1</span>)); <span class="comment">// 最后一个元素</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在 ArrayList 尾部添加、删除元素</span></span><br><span class="line">        c.add(<span class="number">4</span>);</span><br><span class="line">        c.remove(c.size() - <span class="number">1</span>);</span><br><span class="line">        c.remove(c.size() - <span class="number">1</span>);</span><br><span class="line">        System.out.println(c.size()); <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 清空 ArrayList</span></span><br><span class="line">        c.clear();</span><br><span class="line">        System.out.println(c.size()); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// ArrayList 之间的比较需要自己实现</span></span><br><span class="line">        System.out.println(<span class="string">&quot;------ArrayList End------&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testQueue</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Queue Start------&quot;</span>);</span><br><span class="line">    <span class="comment">// 定义q 不是new Queue, 而是LinkedList</span></span><br><span class="line">    Queue&lt;Integer&gt; q = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 入队、出队 不建议使用add/remove(插入失败会报异常) 建议使用offer/poll</span></span><br><span class="line">    q.offer(<span class="number">1</span>); <span class="comment">// 1</span></span><br><span class="line">    q.offer(<span class="number">2</span>); <span class="comment">// 1 2</span></span><br><span class="line">    q.offer(<span class="number">3</span>); <span class="comment">// 1 2 3</span></span><br><span class="line">    q.offer(<span class="number">4</span>); <span class="comment">// 1 2 3 4</span></span><br><span class="line">    q.poll(); <span class="comment">// 2 3 4</span></span><br><span class="line">    <span class="comment">// 获取队头元素 不建议使用element 建议使用peek</span></span><br><span class="line">    System.out.println(q.peek());</span><br><span class="line">    System.out.println(q.size());</span><br><span class="line">    <span class="comment">// 遍历队列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i : q) &#123;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 清空队列</span></span><br><span class="line">    q.clear();</span><br><span class="line">    System.out.println(q.isEmpty());</span><br><span class="line">    System.out.println(<span class="string">&quot;------Queue End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testPriorityQueue</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------PriorityQueue Start------&quot;</span>);</span><br><span class="line">    <span class="comment">// 注意声明的方式</span></span><br><span class="line">    Queue&lt;Integer&gt; q1 = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;(); <span class="comment">// 小根堆</span></span><br><span class="line">    Queue&lt;Integer&gt; q2 = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;(((o1, o2) -&gt; o2 - o1)); <span class="comment">// 大根堆</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Rec</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span>&lt;Rec&gt; &#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line"></span><br><span class="line">        Rec(<span class="type">int</span> x, <span class="type">int</span> y) &#123;</span><br><span class="line">            <span class="built_in">this</span>.x = x;</span><br><span class="line">            <span class="built_in">this</span>.y = y;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(Rec o)</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.x - o.x;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;Rec&#123;&quot;</span> + <span class="string">&quot;x=&quot;</span> + x + <span class="string">&quot;, y=&quot;</span> + y + <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Queue&lt;Rec&gt; q3 = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;();</span><br><span class="line">    q3.offer(<span class="keyword">new</span> <span class="title class_">Rec</span>(<span class="number">1</span>, <span class="number">2</span>));</span><br><span class="line">    q3.offer(<span class="keyword">new</span> <span class="title class_">Rec</span>(<span class="number">6</span>, <span class="number">7</span>));</span><br><span class="line">    q3.offer(<span class="keyword">new</span> <span class="title class_">Rec</span>(<span class="number">5</span>, <span class="number">4</span>));</span><br><span class="line">    q3.offer(<span class="keyword">new</span> <span class="title class_">Rec</span>(<span class="number">3</span>, <span class="number">9</span>));</span><br><span class="line">    <span class="comment">// 删除堆顶元素</span></span><br><span class="line">    q3.poll();</span><br><span class="line">    System.out.println(<span class="string">&quot;堆顶: &quot;</span> + q3.peek());</span><br><span class="line">    <span class="keyword">for</span> (Rec i : q3) &#123;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;------PriorityQueue End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testStack</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Stack Start------&quot;</span>);</span><br><span class="line">    <span class="comment">// Stack 推荐使用Deque实现 两者API完全一致</span></span><br><span class="line">    Deque&lt;Integer&gt; stk = <span class="keyword">new</span> <span class="title class_">ArrayDeque</span>&lt;&gt;();</span><br><span class="line">    stk.push(<span class="number">1</span>); <span class="comment">// 1</span></span><br><span class="line">    stk.push(<span class="number">2</span>); <span class="comment">// 1 2</span></span><br><span class="line">    stk.push(<span class="number">3</span>); <span class="comment">// 1 2 3</span></span><br><span class="line">    stk.push(<span class="number">4</span>); <span class="comment">// 1 2 3 4</span></span><br><span class="line">    stk.pop(); <span class="comment">// 1 2 3</span></span><br><span class="line">    <span class="comment">// 栈顶元素 此时为3</span></span><br><span class="line">    System.out.println(stk.peek());</span><br><span class="line">    System.out.println(stk.size());</span><br><span class="line">    <span class="comment">// 从栈顶向栈底遍历</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i : stk) &#123;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">    stk.clear();</span><br><span class="line">    System.out.println(stk.isEmpty());</span><br><span class="line">    System.out.println(<span class="string">&quot;------Stack End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Deque"><a href="#Deque" class="headerlink" title="Deque"></a>Deque</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testDeque</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Deque Start------&quot;</span>);</span><br><span class="line">    <span class="comment">// Stack 推荐使用Deque实现 两者API完全一致</span></span><br><span class="line">    Deque&lt;Integer&gt; d = <span class="keyword">new</span> <span class="title class_">ArrayDeque</span>&lt;&gt;();</span><br><span class="line">    d.addLast(<span class="number">1</span>); <span class="comment">// 1</span></span><br><span class="line">    d.addLast(<span class="number">2</span>); <span class="comment">// 1 2</span></span><br><span class="line">    d.addFirst(<span class="number">3</span>); <span class="comment">// 3 1 2</span></span><br><span class="line">    d.addFirst(<span class="number">4</span>); <span class="comment">// 4 3 1 2</span></span><br><span class="line">    d.removeFirst(); <span class="comment">// 3 1 2</span></span><br><span class="line">    <span class="comment">// 返回队头元素</span></span><br><span class="line">    System.out.println(d.getFirst());</span><br><span class="line">    <span class="comment">// 返回队尾元素</span></span><br><span class="line">    System.out.println(d.getLast());</span><br><span class="line">    System.out.println(d.size());</span><br><span class="line">    d.clear();</span><br><span class="line">    System.out.println(d.isEmpty());</span><br><span class="line">    System.out.println(<span class="string">&quot;------Deque End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testSet</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Set Start------&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * LinkedHashSet 按照插入顺序 </span></span><br><span class="line"><span class="comment">     * TreeSet 按照元素自然顺序 要求元素具备Comparator方法 </span></span><br><span class="line"><span class="comment">     * HashSet 无序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * LinkedHashSet 链表实现</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    LinkedHashSet&lt;Integer&gt; ls = <span class="keyword">new</span> <span class="title class_">LinkedHashSet</span>&lt;&gt;();</span><br><span class="line">    ls.add(<span class="number">4</span>);</span><br><span class="line">    ls.add(<span class="number">5</span>);</span><br><span class="line">    ls.add(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i : ls) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * TreeSet 红黑树实现</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeSet&lt;Integer&gt; ts = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;();</span><br><span class="line">    ts.add(<span class="number">4</span>);</span><br><span class="line">    ts.add(<span class="number">5</span>);</span><br><span class="line">    ts.add(<span class="number">1</span>);</span><br><span class="line">    <span class="comment">// 自动排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i : ts) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">    <span class="comment">// 排序后的第一个元素</span></span><br><span class="line">    System.out.println(ts.first());</span><br><span class="line">    <span class="comment">// 排序后的最后一个元素</span></span><br><span class="line">    System.out.println(ts.last());</span><br><span class="line">    <span class="comment">// 判断存在某个元素</span></span><br><span class="line">    System.out.println(ts.contains(<span class="number">3</span>));</span><br><span class="line">    <span class="comment">// ceiling/higher</span></span><br><span class="line">    System.out.println(ts.ceiling(<span class="number">4</span>)); <span class="comment">// 返回大于等于4的最小元素: 4</span></span><br><span class="line">    System.out.println(ts.higher(<span class="number">4</span>)); <span class="comment">// 返回大于4的最小元素: 5</span></span><br><span class="line">    <span class="comment">// floor/lower</span></span><br><span class="line">    System.out.println(ts.floor(<span class="number">4</span>)); <span class="comment">// 返回小于等于4的最大元素: 4</span></span><br><span class="line">    System.out.println(ts.lower(<span class="number">4</span>)); <span class="comment">// 返回小于4的最大元素: 1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * HashSet 哈希表实现</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    HashSet&lt;Integer&gt; hs = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    hs.add(<span class="number">12</span>);</span><br><span class="line">    hs.add(<span class="number">4</span>);</span><br><span class="line">    hs.add(<span class="number">5</span>);</span><br><span class="line">    hs.add(<span class="number">69</span>);</span><br><span class="line">    hs.add(<span class="number">9</span>);</span><br><span class="line">    <span class="comment">// 移除元素     </span></span><br><span class="line">    hs.remove(<span class="number">5</span>); </span><br><span class="line">    <span class="comment">// 可以看出其输出是无序的</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i : hs) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;------Set End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testMap</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Map Start------&quot;</span>);</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * TreeMap 有序的Map</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeMap&lt;String, Integer&gt; tm = <span class="keyword">new</span> <span class="title class_">TreeMap</span>&lt;&gt;();</span><br><span class="line">    tm.put(<span class="string">&quot;tm4&quot;</span>, <span class="number">4</span>);</span><br><span class="line">    tm.put(<span class="string">&quot;tm3&quot;</span>, <span class="number">3</span>);</span><br><span class="line">    tm.put(<span class="string">&quot;tm2&quot;</span>, <span class="number">2</span>);</span><br><span class="line">    tm.put(<span class="string">&quot;tm1&quot;</span>, <span class="number">1</span>);</span><br><span class="line">    tm.remove(<span class="string">&quot;tm2&quot;</span>);</span><br><span class="line">    <span class="comment">// 自动排序</span></span><br><span class="line">    <span class="keyword">for</span> (String key : tm.keySet()) &#123;</span><br><span class="line">        System.out.println(tm.get(key));</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(tm.firstEntry());</span><br><span class="line">    System.out.println(tm.lastEntry());</span><br><span class="line">    System.out.println(tm.containsKey(<span class="string">&quot;tm1&quot;</span>));</span><br><span class="line">    System.out.println(tm.containsValue(<span class="number">1</span>));</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * HashMap 无序的Map</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    HashMap&lt;String, Integer&gt; hm = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    hm.put(<span class="string">&quot;hm4&quot;</span>, <span class="number">4</span>);</span><br><span class="line">    hm.put(<span class="string">&quot;hm3&quot;</span>, <span class="number">3</span>);</span><br><span class="line">    hm.put(<span class="string">&quot;hm2&quot;</span>, <span class="number">2</span>);</span><br><span class="line">    hm.put(<span class="string">&quot;hm1&quot;</span>, <span class="number">1</span>);</span><br><span class="line">    hm.remove(<span class="string">&quot;hm2&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (String key : hm.keySet()) &#123;</span><br><span class="line">        System.out.println(hm.get(key));</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(hm.containsKey(<span class="string">&quot;hm1&quot;</span>));</span><br><span class="line">    System.out.println(<span class="string">&quot;------Map End------&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Pair"><a href="#Pair" class="headerlink" title="Pair"></a>Pair</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">testPair</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------Pair Start------&quot;</span>);</span><br><span class="line">    <span class="comment">// 通常建议自己手写一个Pair类</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Pair</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span>&lt;Pair&gt; &#123;</span><br><span class="line">        <span class="type">int</span> x, y;</span><br><span class="line">        Pair(<span class="type">int</span> x, <span class="type">int</span> y) &#123;</span><br><span class="line">            <span class="built_in">this</span>.x = x;</span><br><span class="line">            <span class="built_in">this</span>.y = y;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(Pair o)</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (x != o.x) <span class="keyword">return</span> x - o.x;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> y - o.y;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;x: &quot;</span> + x + <span class="string">&quot; y: &quot;</span> + y;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">Pair</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Pair</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="type">Pair</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Pair</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="type">Pair</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Pair</span>(<span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">    List&lt;Pair&gt; pairList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    pairList.add(c); pairList.add(b); pairList.add(a);</span><br><span class="line">    <span class="keyword">for</span> (Pair p : pairList) &#123;</span><br><span class="line">        System.out.println(p);</span><br><span class="line">    &#125;</span><br><span class="line">    Collections.sort(pairList);</span><br><span class="line">    System.out.println();</span><br><span class="line">    <span class="keyword">for</span> (Pair p : pairList) &#123;</span><br><span class="line">        System.out.println(p);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;------Pair End------&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">JAVA常用数据结构</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">pu</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2022-04-03 18:32:25</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/04/03/JAVA常用数据结构/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#List"><span class="nav-number">1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Queue"><span class="nav-number">2.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PriorityQueue"><span class="nav-number">3.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack"><span class="nav-number">4.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deque"><span class="nav-number">5.</span> <span class="nav-text">Deque</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set"><span class="nav-number">6.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-number">7.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pair"><span class="nav-number">8.</span> <span class="nav-text">Pair</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">pu</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+<!--        <div class="theme-info info-item">-->
+<!--            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>-->
+<!--        </div>-->
+        
+        
+            <div class="deploy-info info-item">
+                
+                    本站由 <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                
+            </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
