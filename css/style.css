@@ -353,7 +353,7 @@ body {
   color: var(--text-color-3);
   font-weight: 400;
   font-size: 16px;
-  font-family: Crimson Text, serif;
+  font-family: Crimson Text, Noto Serif SC, serif;
   line-height: 22px;
   letter-spacing: 0.2px;
   background: var(--background-color-1);
@@ -2606,6 +2606,17 @@ pre .javascript .function {
   height: 100vh;
   overflow: hidden;
   background: url("/images/bg.svg") center center/cover no-repeat;
+  background-position-y: 70px;
+}
+@media (max-width: 800px) {
+  .first-screen-container {
+    background-position-y: 63px;
+  }
+}
+@media (max-width: 500px) {
+  .first-screen-container {
+    background-position-y: 56px;
+  }
 }
 .first-screen-container .content {
   position: relative;

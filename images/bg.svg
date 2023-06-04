@@ -1,39 +1,63 @@
-<svg
-  version="1.1"
-  baseProfile="full"
-  width="100%" height="100%"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1400 800"
->
-
-  <rect x="1300" y="400" rx="40" ry="40" width="300" height="300" stroke="rgb(129, 201, 149)" fill="rgb(129, 201, 149)">
-    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite" />
-  </rect>
-
-  <path d="M 100 350 A 150 150 0 1 1 400 350 Q400 370 380 370 L 250 370 L 120 370 Q100 370 100 350" stroke="rgb(253, 214, 99)" fill="rgb(253, 214, 99)">
-    <animateMotion path="M 800 -200 L 800 -300 L 800 -200" dur="20s" begin="0s" repeatCount="indefinite" />
-    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 210 530 ; -30 210 530 ; 0 210 530" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite" />
-  </path>
-
-  <circle cx="200" cy="150" r="20" stroke="#1a73e8" fill="#1a73e8">
-    <animateMotion path="M 0 0 L 40 20 Z" dur="5s" repeatCount="indefinite" />
-  </circle>
-
-  <!-- 三角形 -->
-  <path d="M 165 580 L 270 580 Q275 578 270 570 L 223 483 Q220 480 217 483 L 165 570 Q160 578 165 580" stroke="rgb(238, 103, 92)" fill="rgb(238, 103, 92)">
-    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 210 530" to="360 210 530" repeatCount="indefinite" />
-  </path>
-
-  <circle cx="1200" cy="600" r="30" stroke="rgb(241, 243, 244)" fill="rgb(241, 243, 244)">
-    <animateMotion path="M 0 0 L -20 40 Z" dur="9s" repeatCount="indefinite" />
-  </circle>
-
-  <path d="M 100 350 A 40 40 0 1 1 180 350 L 180 430 A 40 40 0 1 1 100 430 Z" stroke="rgb(241, 243, 244)" fill="rgb(241, 243, 244)">
-    <animateMotion path="M 140 390 L 180 360 L 140 390" dur="20s" begin="0s" repeatCount="indefinite" />
-    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 140 390; -60 140 390; 0 140 390" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite" />
-  </path>
-
-  <rect x="400" y="600" rx="40" ry="40" width="100" height="100" stroke="rgb(129, 201, 149)" fill="rgb(129, 201, 149)">
-    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="-30 550 750" to="330 550 750" repeatCount="indefinite" />
-  </rect>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#f1f2f3;display:block;z-index:1;position:relative" width="2117" height="1140" preserveAspectRatio="xMidYMid" viewBox="0 0 2117 1140">
+<g transform="translate(1058.5,570) scale(1,1) translate(-1058.5,-570)"><defs>
+  <linearGradient id="lg-0" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#85a2b6" offset="0.25"></stop>
+  <stop stop-color="#bbcedd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-0)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="0s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z;M0 -171 c757.25 342 1359.75 -342 2117 0
+L2117 421.79999999999995 c301.25 -342 -2418.25 342 -2117 0Z;M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-1" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#dce4eb" offset="0.25"></stop>
+  <stop stop-color="#bbcedd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z" fill="url(#lg-1)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-0.4s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z;M0 125.39999999999998 c301.25 342 1815.75 -342 2117 0
+L2117 718.2 c757.25 -342 -2874.25 342 -2117 0Z;M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-2" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#dce4eb" offset="0.25"></stop>
+  <stop stop-color="#fdfdfd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-2)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-0.8s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z;M0 421.79999999999995 c757.25 342 1359.75 -342 2117 0
+L2117 1014.5999999999999 c301.25 -342 -2418.25 342 -2117 0Z;M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-3" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#d69293" offset="0.25"></stop>
+  <stop stop-color="#fdfdfd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z" fill="url(#lg-3)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-1.2s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z;M0 718.2 c301.25 342 1815.75 -342 2117 0
+L2117 1311 c757.25 -342 -2874.25 342 -2117 0Z;M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-4" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#d69293" offset="0.25"></stop>
+  <stop stop-color="#be5960" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-4)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-1.6s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z;M0 1014.5999999999999 c757.25 342 1359.75 -342 2117 0
+L2117 1607.4 c301.25 -342 -2418.25 342 -2117 0Z;M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path></g>
 </svg>
