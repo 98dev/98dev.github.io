@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#f1f2f3;display:block;z-index:1;position:relative" width="2117" height="1140" preserveAspectRatio="xMidYMid" viewBox="0 0 2117 1140">
+<g transform="translate(1058.5,570) scale(1,1) translate(-1058.5,-570)"><defs>
+  <linearGradient id="lg-0" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#85a2b6" offset="0.25"></stop>
+  <stop stop-color="#bbcedd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-0)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="0s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z;M0 -171 c757.25 342 1359.75 -342 2117 0
+L2117 421.79999999999995 c301.25 -342 -2418.25 342 -2117 0Z;M0 -171 c301.25 342 1815.75 -342 2117 0
+L2117 421.79999999999995 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-1" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#dce4eb" offset="0.25"></stop>
+  <stop stop-color="#bbcedd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z" fill="url(#lg-1)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-0.4s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z;M0 125.39999999999998 c301.25 342 1815.75 -342 2117 0
+L2117 718.2 c757.25 -342 -2874.25 342 -2117 0Z;M0 125.39999999999998 c757.25 342 1359.75 -342 2117 0
+L2117 718.2 c301.25 -342 -2418.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-2" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#dce4eb" offset="0.25"></stop>
+  <stop stop-color="#fdfdfd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-2)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-0.8s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z;M0 421.79999999999995 c757.25 342 1359.75 -342 2117 0
+L2117 1014.5999999999999 c301.25 -342 -2418.25 342 -2117 0Z;M0 421.79999999999995 c301.25 342 1815.75 -342 2117 0
+L2117 1014.5999999999999 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-3" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#d69293" offset="0.25"></stop>
+  <stop stop-color="#fdfdfd" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z" fill="url(#lg-3)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-1.2s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z;M0 718.2 c301.25 342 1815.75 -342 2117 0
+L2117 1311 c757.25 -342 -2874.25 342 -2117 0Z;M0 718.2 c757.25 342 1359.75 -342 2117 0
+L2117 1311 c301.25 -342 -2418.25 342 -2117 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-4" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#d69293" offset="0.25"></stop>
+  <stop stop-color="#be5960" offset="0.75"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z" fill="url(#lg-4)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="2s" begin="-1.6s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z;M0 1014.5999999999999 c757.25 342 1359.75 -342 2117 0
+L2117 1607.4 c301.25 -342 -2418.25 342 -2117 0Z;M0 1014.5999999999999 c301.25 342 1815.75 -342 2117 0
+L2117 1607.4 c757.25 -342 -2874.25 342 -2117 0Z"></animate>
+</path></g>
+</svg>
